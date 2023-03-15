@@ -45,6 +45,7 @@ console.log(cartData)
   return (
     <div className="cartContainer">
       <div className="cartDetails">
+      
         {cartData.length > 0?(
           cartData.map((cartItem,id)=>(
             <div className="cart" key={id}>
@@ -55,7 +56,8 @@ console.log(cartData)
               <span className="cart-product-price">Rs{cartItem.price}</span>
             </div>
           ))
-        ):(
+        )
+        :(
           <div className='else'>
             <h2> To Make Yourself Happy...!</h2>
             <div  className=" btn add-to-cart" onClick={()=> {navigate('/')}}>Go to shopping</div>
@@ -77,7 +79,8 @@ console.log(cartData)
               </div>
 
               <div className="stripe-section">
-              <button onClick={()=>{razorPayDisplay(Tprice)}}>Checkout</button>
+              <div className="add-to-cart" onClick={()=>{razorPayDisplay(Tprice)}}>Make a Payment</div>
+              <div  className="add-to-cart" onClick={()=> {navigate('/')}}>Add More itmes</div>
               </div>
             </div>
           </div>

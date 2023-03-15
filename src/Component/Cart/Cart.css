@@ -126,4 +126,6 @@
   .btn{
     width: 150px;
   }
-  
+  .stripe-section div{
+    margin: 2px;
+  }
